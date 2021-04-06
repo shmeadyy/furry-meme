@@ -1,13 +1,11 @@
-name: 'Wait'
-description: 'Wait a designated number of milliseconds'
+name: 'Greetings!'
+description: 'Send a greeting message when the Action is run'
 inputs:
-  milliseconds:  # id of input
-    description: 'number of milliseconds to wait'
+  name:  # id of input
+    description: 'name of repo owner'
     required: true
-    default: '1000'
-outputs:
-  time: # output will be available to future steps
-    description: 'The message to output'
+    default: 'World'
+
 runs:
   using: 'node12'
   main: 'dist/index.js'
